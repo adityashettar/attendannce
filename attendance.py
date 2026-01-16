@@ -9,11 +9,7 @@ class Attendance:
         return (self.classes_attended / self.classes_held) * 100
 
     def check_eligibility(self):
-        percentage = self.calculate_percentage()
-        if percentage >= 75:
-            return "Eligible"
-        else:
-            return "Not Eligible"
+        return "Eligible" if self.calculate_percentage() >= 75 else "Not Eligible"
 
 
 if __name__ == "__main__":
